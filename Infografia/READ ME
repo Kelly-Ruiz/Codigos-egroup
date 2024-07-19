@@ -1,0 +1,21 @@
+Con estos dos codigos de JS, ya no es necesario volverlos a llamar en cada slide donde sea necesario validar el Scrollarea.
+
+
+FUNCIONES BASE
+Estas fuciones no devuelven valores, pero para invocarlas es necesario con un parametro
+La funcion de bloqueoScroll llama por defecto a la funcion de calcularPorcentaje por lo que si es necesario inicial el slide con un bloqueo del scorllarea, no sera necesario llamar ambas funciones
+
+
+FUNCIONES DE ALTURAS
+Estas funciones devuelven todas un valor, el cual serivra para enviar a la funcion de bloqueo
+
+
+EJEMPLO DE USO DE LAS FUNCIONES
+
+1) conocer el valor de num, para usar animaciones sin bloqueo de interacciones
+var x = document.getElementsByClassName("scrollarea-area")[0]
+window.propiedadesScroll.calcularPorcentaje(x)
+
+2) Hace bloqueo de scroll, y la altura de bloqueo es que deja ocultar lo que se alcanza a ver en pantalla
+var hTop = window.alturaElementos.altoContenedor()
+window.propiedadesScroll.bloqueoScroll(hTop)
